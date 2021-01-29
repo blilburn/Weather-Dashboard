@@ -14,92 +14,37 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center mb-3">
-        <a class="navbar-brand text" href="#index.html">Weather Dashboard</a>
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary d-flex justify-content-center mb-3">
+        <a class="navbar-brand text" href="#index.html" style="color: white">Weather Dashboard</a>
     </nav>
-    <div class="container">
+    <div class="container-fluid bg-light">
         <div class="row justify-content-center">
             <div class="col-md-9 text-center">
                 <h2 class="card-header">City Forecast Search</h2>
                 <div class="card" style="margin: 15px;" style="width: 18rem;">
-                    <input id="userText" type="text" class="form-control" placeholder="Input Desired City"
+                    <input id="userText" type="text" class="form-control text-center" placeholder="Input Desired City"
                         aria-label="Username" aria-describedby="addon-wrapping" style="margin: 15px;">
-                    <div class="card-body"></div>
+                    <div class="input-group-append"></div>
                     <button id="searchBtn" type="button" style="margin: 15px;" class="btn btn-success">Search</button>
+                </div>
+
+                <div class="card mt-5" style="display: none;">
+                    <ul class="list-group list-group-flush append-list">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-6 bg-white text-center">    
+                <div id="weatherUpdate"></div>
+                <h4 class="mt-3 text-center" id="weatherDisplay" > Five-Day Forecast: </h4>
+                <div class="card-deck ml-1 d-flex justify-content-center">
+                    <div id="weatherFiveday" class="row"></div>               
                 </div>
             </div>
         </div>
     </div>
-    <br><br>
-    <div class="row justify-content-center">
-        <div class="col-md-9 text-center">
-            <h2 class="card-header">Current Forecast</h2>
-            <div class="card" style="margin: 15px;" style="width: 18rem;">
-                <div class="card-body"></div>
-                <div class="card-subtitle mb-2" id="card-title" id="city"></div>
-                <div class="card-subtitle mb-2" id="temp"></div>
-                <div class="card-subtitle mb-2" id="humidity"></div>
-                <div class="card-subtitle mb-2" id="wind"></div>
-                <div class="card-subtitle mb-2" id="uv"></div>
-            </div>
-        </div>
-    </div>
-    <!--replacing below with for loop and append method.
-                <div class="col-md text-center">
-                    <div class="card" style="margin: 15px;" style="width: 18rem;">
-                        <div class="card-body"></div>
-                        <div class="card-subtitle mb-2" id="card-title" id="city2"></div>
-                        <div class="card-subtitle mb-2" id="temp2"></div>
-                        <div class="card-subtitle mb-2" id="humidity2"></div>
-                        <div class="card-subtitle mb-2" id="wind2"></div>
-                        <div class="card-subtitle mb-2" id="uv2"></div>
-                    </div>
-            </div>
-            <div class="col-md text-center">
-                    <div class="card" style="margin: 15px;" style="width: 18rem;">
-                        <div class="card-body"></div>
-                        <div class="card-subtitle mb-2" id="card-title" id="city3"></div>
-                        <div class="card-subtitle mb-2" id="temp3"></div>
-                        <div class="card-subtitle mb-2" id="humidity3"></div>
-                        <div class="card-subtitle mb-2" id="wind3"></div>
-                        <div class="card-subtitle mb-2" id="uv3"></div>
-                    </div>
-            </div>
-            <div class="col-md text-center">
-                    <div class="card" style="margin: 15px;" style="width: 18rem;">
-                        <div class="card-body"></div>
-                        <div class="card-subtitle mb-2" id="card-title" id="city4"></div>
-                        <div class="card-subtitle mb-2" id="temp4"></div>
-                        <div class="card-subtitle mb-2" id="humidity4"></div>
-                        <div class="card-subtitle mb-2" id="wind4"></div>
-                        <div class="card-subtitle mb-2" id="uv4"></div>
-                    </div>
-            </div>
-            <div class="col-md text-center">
-                    <div class="card" style="margin: 15px;" style="width: 18rem;">
-                        <div class="card-body"></div>
-                        <div class="card-subtitle mb-2" id="card-title" id="city5"></div>
-                        <div class="card-subtitle mb-2" id="temp5"></div>
-                        <div class="card-subtitle mb-2" id="humidity5"></div>
-                        <div class="card-subtitle mb-2" id="wind5"></div>
-                        <div class="card-subtitle mb-2" id="uv5"></div>
-                    </div>
-            </div>
-            <div class="col-md text-center">
-                    <div class="card" style="margin: 15px;" style="width: 18rem;">
-                        <div class="card-body"></div>
-                        <div class="card-subtitle mb-2" id="card-title" id="city6"></div>
-                        <div class="card-subtitle mb-2" id="temp6"></div>
-                        <div class="card-subtitle mb-2" id="humidity6"></div>
-                        <div class="card-subtitle mb-2" id="wind6"></div>
-                        <div class="card-subtitle mb-2" id="uv6"></div>
-                    </div>
-            </div>-->
-    <h2 class="card-header text-center">Five Day Forecast</h2>
-    <div id="current-list" class="card card-group justify-content-center" style="margin: 15px;" style="width: 15rem;">
-    </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
 </body>
